@@ -7,10 +7,13 @@ char *reverseStr(char *str) {
 	char *right;
 	char temp;
 
-	while (*str++ != '\0'); // Move str past end of string
+	while (*str != '\0') {
+		str++;
+	} // Move str past end of string
+	
 	// Set right to the last character in str
-
 	right = str - 1;
+	
 	printf("%c", *right);
 	// Reset str to original value
 	str = left;

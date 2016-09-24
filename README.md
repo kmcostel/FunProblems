@@ -1,4 +1,3 @@
 # FunProblems
-## Random coding questions
 
-Some sample coding interview questions
+Some sample coding interview questions (mainly for fun).

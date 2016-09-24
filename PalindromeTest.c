@@ -1,12 +1,34 @@
 /* Author: Kevin Costello
  * Date: 9/23/2016
+ * About: Tests if the inputted string is a palindrome
  */
 
  #include <stdio.h>
 
 int isPalindrome(char *str) {
+	char *leftPtr, *rightPtr;
 
-	return 0;
+	// At start of the string
+	leftPtr = str;
+	while (*str != '\0') {
+		str++;
+	}
+	// At last non terminating character in string
+	rightPtr = str - 1;
+
+	// Test if a palindrome!
+	while (leftPtr < rightPtr) {
+		if (*leftPtr != *rightPtr) {
+			return 0;
+		}
+		else {
+			leftPtr++;
+			rightPtr--;
+		}
+	}
+
+
+	return 1;
 }
 
 

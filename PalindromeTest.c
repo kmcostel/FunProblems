@@ -13,14 +13,14 @@ int isPalindrome(char *str) {
 int main(int argc, char **argv) {
 	char testStr[20];
 
-	printf("Enter a string\n!");
+	printf("Enter a string!\n");
 	scanf("%s", testStr);
 
 	if (isPalindrome(testStr)) {
 		printf("Yea that's a palindrome!\n");
 	}
 	else {
-		printf("Sorry! Not a palindrome!");
+		printf("Sorry! Not a palindrome!\n");
 	}
 
 	return 0;

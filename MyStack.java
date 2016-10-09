@@ -3,6 +3,7 @@
  * Date: 9/24/2016
  */
 
+import java.util.EmptyStackException;
 
 public class MyStack<E> {
 	// Initial size of the stack
@@ -11,18 +12,22 @@ public class MyStack<E> {
 	private E[] myArray;
 	// Current size of the stack
 	private int currSize;
-	private Integer[] myInts;
 
-	public MyStack<E>() {
+	public MyStack() {
 		currSize = 0;
-		myArray = E[INIT_SIZE];
+		myArray = new E[INIT_SIZE];
 	}
 
 	public E pop(E element) {
 		if (currSize == 0) {
-			throw new NoSuchElementException();
+			throw new EmptyStackException();
 		}
-		return false;
+		else {
+			currSize--;
+			E popThis = myArray[currSize];
+			myArray[currSize] = null;
+			return popThis;
+		}
 	}
 	public E push(E element) {
 		return null;

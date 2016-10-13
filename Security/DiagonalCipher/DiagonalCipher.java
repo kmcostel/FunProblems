@@ -173,6 +173,7 @@ public class DiagonalCipher {
     greeting += "\n\n> ";
     System.out.print(greeting);
 
+    // Each index is a line of the file
     lineList = new ArrayList<String>();
 
     try {
@@ -206,6 +207,7 @@ public class DiagonalCipher {
 }
 
 /* Sample Output:
+
   Welcome to DiagonalCipher!
   Please provide a path to a file to begin.
 
